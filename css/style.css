@@ -1,0 +1,351 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    font-family: Roboto Mono;
+    background-color: #fff;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: rgb(220, 214, 200);
+    padding: 1rem 5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* NAVIGATION HEADER */
+
+nav {
+   /* z-index: 100000; */
+    margin-left: auto;
+}
+
+.Isotype {
+    width: 100px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+    background-color: transparent;
+}
+
+nav li {
+    display: inline-block;
+    position: relative;
+}
+
+nav a {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: rgb(43, 53, 57);
+    text-decoration: none;
+    transition: background-color 0.5s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.758);
+    border-radius: 6px;
+}
+
+/* SUBLINKS */
+nav ul li ul {
+    display: none; 
+    position: absolute;
+    top:100%;
+    left: 0;
+    width: 14rem;
+    background-color: rgb(220, 214, 200);
+    z-index: 1;
+}
+
+nav li:hover > ul, nav li:focus-within > ul {
+    display: block;
+    border-radius: 6px;
+}
+
+nav li li {
+    display: block;
+}
+
+nav li li a {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+}
+
+/* HERO VIDEO */
+
+.hero video {
+    display:block;
+    width: 100%;
+    height: auto;
+}
+
+/* DESIGN PHILOSOPHY */
+
+.DesignPhilosophy {
+    text-align: center;
+    background-color: #fff;
+    padding: 12rem 7rem;
+    color: rgb(43, 53, 57);
+}
+
+.DesignPhilosophy h2 {
+    line-height: 3;
+}
+
+.DesignPhilosophy p {
+    max-width: 900px;
+    text-align: justify;
+    text-align-last: center;
+    /* text-align-last to make text besides justified, centered */
+    margin: 0 auto 1.25rem;
+    line-height: 1.7;
+}
+
+/* FEATURED PROJECTS SECTION */
+
+.TextFeaturedProjects {
+    background-color: rgb(220, 214, 200);
+    padding: 2rem;
+}
+.TextFeaturedProjects h2 {
+    text-align: center;
+    color: rgb(43, 53, 57);
+    margin: 0;
+}
+
+.FeaturedProjects {
+    width: 100%;
+    background-color: rgb(220, 214, 200);
+    padding: 5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.FProjects {
+    flex: 0 0 40%;
+    margin: 1.5rem auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.desc {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 1s ease;
+    background-color: rgba(225, 225, 225, 0.8);
+}
+
+.desc h2 {
+    margin: 0;
+}
+
+.FProjects:hover .desc {
+    opacity: 1;
+}
+
+.FProjects img {
+    transform: scale(1);
+    transition: all 1s ease;
+}
+
+.FProjects .desc h2,
+.FProjects .desc p {
+    color: rgb(43, 53, 57);
+    margin: 0 auto 1rem;
+    max-width: 400px;
+    text-align: center;
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* FOOTER SECTION */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 2rem 6rem;
+}
+
+.footer_info {
+    color: rgb(43, 53, 57);
+}
+.footer_socials {
+    width: 300px;
+}
+
+/* PROJECTS SECTIONS */
+
+main.container {
+    background: url('../img/residential/fondoprojects.jpg');
+    min-height: 100vh;
+    display: flow-root;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.ProjectsIntroduction {
+    text-align: center;
+    background-color: transparent;
+    padding: 10rem 7rem 5rem;
+    color: rgb(43, 53, 57);
+}
+
+.ResidentialProjects {
+    width: 100%;
+    background-color: transparent;
+    padding: 4rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.ProjectsPhotos {
+    flex: 0 0 40%;
+    margin: 1.5rem auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.ProjectsPhotos:hover .desc {
+    opacity: 1;
+}
+
+.ProjectsPhotos img {
+    transform: scale(1);
+    transition: all 1s ease;
+}
+
+.ProjectsPhotos .desc h2,
+.ProjectsPhotos .desc p {
+    color: rgb(43, 53, 57);
+    margin: 0 auto 1rem;
+    max-width: 400px;
+    text-align: center;
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ABOUT US SECTION */
+
+/* MEDIA QUERIES SECTION */
+
+@media screen and (max-width: 768px) { 
+
+     body {
+        background-color: #fff;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    nav {
+        margin: 0;
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        padding: 0.75rem;
+    }
+
+    .hero {
+        height: 50vh;
+        overflow: hidden;
+    }
+   /* to make hero video adjust/resize on phone screen */
+    .hero video {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .DesignPhilosophy h2 {
+        line-height: 1.5;
+    }
+
+    .DesignPhilosophy {
+        padding: 8rem 2.2rem;
+    }
+
+    .FeaturedProjects {
+        padding: 2rem 1rem;
+    }
+
+    .FProjects {
+        flex-basis: 100%;
+        margin: 1rem 0;
+    }
+
+    .ProjectsPhotos {
+        flex-basis: 100%;
+        margin: 1rem 0;
+    }
+
+    .ProjectsPhotos .desc,
+    .FProjects .desc {
+        position: static;
+        opacity: 1;
+        background-color: transparent;
+        padding: 1rem;
+        transition: none;
+    }
+
+    footer {
+        flex-direction: row;
+        gap: 1rem;
+        padding: 2rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .footer_info {
+        text-align: left;
+        font-size: 0.75rem;
+    }
+
+    .footer_socials {
+        width: auto;
+        max-width: 60%;
+        text-align: right;
+    }
+
+} 
