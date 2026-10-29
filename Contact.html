@@ -15,20 +15,11 @@
         menu.classList.toggle('show')
       }
     </script> -->
-    <script>
-    const menuButton = document.querySelector(".menu-toggle");
-    const siteMenu = document.querySelector("#site-menu");
-
-    menuButton.addEventListener("click", () => {
-        const isOpen = siteMenu.classList.toggle("is-open");
-        menuButton.setAttribute("aria-expanded", isOpen);
-    });
-    </script>
   </head>
   <body>
      <header>
         <div class="Isotype">
-            <img src="./img/Index/Isotipo.png" alt="Isotype">
+            <img src="./img/index/Isotipo.png" alt="Isotype">
         </div>
         <button class="menu-toggle" aria-label="Open navigation menu"
                 aria-expanded="false" aria-controls="site-menu">
@@ -37,7 +28,7 @@
         <!-- <span class="mobile-menu" onclick="toggleshow()">&#8801;</span> -->
         <nav id="site-menu">
             <ul class="menu">
-                <li><a href="./Index.html">Studio</a></li>
+                <li><a href="./index.html">Studio</a></li>
                 <li>
                     <a href="#">Projects</a>
                     <ul>
@@ -103,8 +94,16 @@
         </div>
 
         <div class="footer_socials">
-            <img src="./img/Index/nova_socials.png" alt="nova_social_media">
+            <img src="./img/index/nova_socials.png" alt="nova_social_media">
         </div>
     </footer>
+     <script>
+    const menuButton = document.querySelector(".menu-toggle");
+    const siteMenu = document.querySelector("#site-menu");
 
+    menuButton.addEventListener("click", () => {
+        const isOpen = siteMenu.classList.toggle("is-open");
+        menuButton.setAttribute("aria-expanded", isOpen);
+    });
+    </script>
   </body>
