@@ -31,6 +31,10 @@ nav {
     margin-left: auto;
 }
 
+.menu-toggle {
+    display: none;
+}
+
 .Isotype {
     width: 100px;
 }
@@ -255,6 +259,122 @@ main.container {
 }
 
 /* ABOUT US SECTION */
+.AboutUsDesc {
+    text-align: center;
+    background-color: #fff;
+    padding: 10rem 7rem;
+    color: rgb(43, 53, 57);
+}
+
+.AboutUsDesc p {
+    max-width: 900px;
+    text-align: justify;
+    text-align-last: center;
+    /* text-align-last to make text besides justified, centered */
+    margin: 0 auto 1.25rem;
+    line-height: 1.7;
+}
+
+.womenworking {
+    width: 100%;
+    background-color: fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 8rem;
+    justify-content: space-between;
+}
+
+.aboutusdesc {
+    text-align: center;
+    background-color: rgb(220, 214, 200);
+    padding: 12rem 7rem;
+    color: rgb(43, 53, 57);
+}
+
+.aboutusdesc p {
+    max-width: 900px;
+    text-align: justify;
+    text-align-last: center;
+    /* text-align-last to make text besides justified, centered */
+    margin: 0 auto 1.25rem;
+    line-height: 1.7;
+}
+
+/* CONTACT SECTION */
+.contactform {
+  width: 50%;
+  margin: 10rem auto 0;
+  border-radius: 1rem;
+  padding: 2rem;
+  background-color: rgb(220, 214, 200);
+  color: rgb(43, 53, 57);
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.label {
+  font-size: 1.5rem;
+}
+
+.input {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--c-text);
+  margin-right: 0;
+}
+
+.tellusproject {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+
+.message {
+  height: 16rem;
+  border-radius: 0.25rem;
+  padding: 1rem;
+}
+
+.button {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 2rem;
+}
+
+.btn {
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: #fff;
+  color: rgb(43, 53, 57);
+  border: 1px solid var(--c-text);
+}
+
+.btn:hover {
+  background-color: rgb(162, 123, 90);
+}
+
+.businesscard {
+    width: 100%;
+    background-color: transparent;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 
 /* MEDIA QUERIES SECTION */
 
@@ -265,15 +385,42 @@ main.container {
     }
 
     header {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         align-items: center;
         padding: 1rem;
     }
 
+     .menu-toggle {
+        display: block;
+        margin-left: auto;
+        padding: 0.5rem;
+        border: 0;
+        background: transparent;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
     nav {
+        display: none;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    nav.is-open {
+        display: block;
+    }
+
+    nav > ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* nav {
         margin: 0;
         width: 100%;
-    }
+    } 
 
     nav ul {
         display: flex;
@@ -283,7 +430,7 @@ main.container {
 
     nav a {
         padding: 0.75rem;
-    }
+    } */
 
     .hero {
         height: 50vh;
@@ -328,6 +475,59 @@ main.container {
         padding: 1rem;
         transition: none;
     }
+
+    .AboutUsDesc,
+    .aboutusdesc {
+        padding: 8rem 2.2rem;
+    }
+
+    .AboutUsDesc p,
+    .aboutusdesc p {
+        text-align: justify;
+        text-align-last: center;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+    }
+
+    .contactform {
+        width: calc(100% - 2rem);
+        margin: 3rem auto 0;
+        padding: 1.5rem 1rem;
+    }
+
+    .contactform h1 {
+        font-size: 1.35rem;
+        line-height: 1.4;
+    }
+
+    .row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        text-align: left;
+    }
+
+    .row .label {
+        font-size: 1rem;
+    }
+
+    .row .input {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .tellusproject {
+        font-size: 1.25 rem;
+    }
+
+    .tellusproject .label {
+        font-size: 1.25 rem;
+    }
+
+    .message {
+        width: 100%
+    }
+
 
     footer {
         flex-direction: row;

@@ -15,16 +15,29 @@
         menu.classList.toggle('show')
       }
     </script> -->
+    <script>
+    const menuButton = document.querySelector(".menu-toggle");
+    const siteMenu = document.querySelector("#site-menu");
+
+    menuButton.addEventListener("click", () => {
+        const isOpen = siteMenu.classList.toggle("is-open");
+        menuButton.setAttribute("aria-expanded", isOpen);
+    });
+    </script>
   </head>
   <body>
      <header>
         <div class="Isotype">
-            <img src="./img/landing_page/Isotipo.png" alt="Isotype">
+            <img src="./img/Index/Isotipo.png" alt="Isotype">
         </div>
+        <button class="menu-toggle" aria-label="Open navigation menu"
+                aria-expanded="false" aria-controls="site-menu">
+            ☰
+        </button>
         <!-- <span class="mobile-menu" onclick="toggleshow()">&#8801;</span> -->
-        <nav>
+        <nav id="site-menu">
             <ul class="menu">
-                <li><a href="./LandingPage.html">Studio</a></li>
+                <li><a href="./Index.html">Studio</a></li>
                 <li>
                     <a href="#">Projects</a>
                     <ul>
@@ -33,8 +46,8 @@
                         <li><a href="#">Interior Design</a></li>
                     </ul>
                 </li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="./AboutUs.html">About Us</a></li>
+                <li><a href="./Contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -126,7 +139,7 @@
         </div>
 
         <div class="footer_socials">
-            <img src="./img/landing_page/nova_socials.png" alt="nova_social_media">
+            <img src="./img/Index/nova_socials.png" alt="nova_social_media">
         </div>
     </footer>
   </body>
